@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Culqi Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <style media="screen">
+      #response {
+        background-color: #9ED9EA
+      }
+      #response2 {
+        background-color: #9ED9EA
+      }
+      #response3 {
+        background-color: #9ED9EA
+      }
+      strong {
+        color: #327AB7
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4" >
+          <div>
+            <h1>Registrate</h1><br><br>
+            <form>
+              <div>
+                <label>address:</label>
+                <input type="text" class="form-control" id="address">
+              </div>
+              <div class="form-group">
+                <label>address_city:</label>
+                <input class="form-control" id="address_c">
+              </div>
+              <div class="form-group">
+                <label>country_code:</label>
+                <input class="form-control" id="country" value="PE">
+              </div>
+              <div class="form-group">
+                <label>email:</label>
+                <input class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label>first_name:</label>
+                <input class="form-control" id="f_name">
+              </div>
+              <div class="form-group">
+                <label>last_name:</label>
+                <input class="form-control" id="l_name">
+              </div>
+              <div class="form-group">
+                <label>phone_number:</label>
+                <input class="form-control" id="phone">
+              </div>
+              <a id="crearCustomer" class="btn btn-primary btn-lg" href="#" >Crear Customer</a>
+            </form>
+            <br/><br/>
+            <div class="panel panel-default" id="response-panel">
+              <div class="panel-heading">Response</div>
+              <div class="panel-body" id="response">
+              </div>
+            </div>
+            <!-- <div id="check" style="width: 400px; height: 600px">
+
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-4" >
+          <div>
+            <h1>Guarda tu tarjeta</h1><br><br>
+            <a id="crearCard" class="btn btn-primary btn-lg" href="#">Crear Card</a><br><br>
+            <input id="idCustomer" class="form-control" type="text" name="" value=""><br><br>
+            <div class="panel panel-default" id="response-panel2">
+              <div class="panel-heading">Response</div>
+              <div class="panel-body" id="response2">
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1>Crear Plan</h1>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Plan Basico <strong>pln_test_y3Px86ArynFbn4Iq</strong>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                Plan Premium <strong>pln_test_IQpI7Upm53lVetb5</strong>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Crear Plan
+              </label>
+            </div>
+            <br>
+            <!-- <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+              <label class="form-check-label" for="exampleRadios3">
+                Crear Plan
+              </label>
+            </div> -->
+            <label for="">Nombre del Plan</label>
+            <input class="form-control" type="text" name="" id="name_plan">
+            <label for="">Moneda</label>
+            <input placeholder="ejemplo:PEN" class="form-control" type="text" name="" id="moneda_plan">
+            <label for="">Monto</label>
+            <input placeholder="ejemplo:3000" class="form-control" type="text" name="" id="monto_plan">
+            <label for="">Cada cuanto</label>
+            <input placeholder="ejemplo:1" class="form-control" type="text" name="" id="cada">
+            <label for="">Período</label>
+            <input placeholder="ejemplo:meses" class="form-control" type="text" name="" id="periodo">
+            <label for="">Número de veces</label>
+            <input placeholder="ejemplo:12" class="form-control" type="text" name="" id="numero_veces"><br>
+            <a id="crearPlan" class="btn btn-primary btn-lg" href="#">Crear Plan</a><br><br>
+            <div class="panel panel-default" id="response-panel3">
+              <div class="panel-heading">Response</div>
+              <div class="panel-body" id="response3">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" >
+          <div>
+            <h1>Crear Suscripción</h1><br><br>
+            <label for="">Id del Plan:</label>
+            <input id="idPlan" class="form-control" type="text" name="">
+            <label for="">Id del Card:</label>
+            <input id="idCard" class="form-control" type="text" name=""><br><br>
+            <div class="">
+              <a  id="crearSuscripcion" class="btn btn-primary btn-lg" href="#">Crear Suscripción</a><br><br>
+            </div><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://checkout.culqi.com/js/v3"></script>
+    <script type="text/javascript" src="js/crearCustomer.js" ></script>
+    <script type="text/javascript" src="js/crearCard.js" ></script>
+    <script type="text/javascript" src="js/crearPlan.js" ></script>
+    <script type="text/javascript" src="js/crearSuscripcion.js" ></script>
+  </body>
+</html>
